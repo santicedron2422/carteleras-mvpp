@@ -1,0 +1,28 @@
+
+:root{
+  --gap:12px;
+  --accent:#2b6df6;
+  --muted:#666;
+  --bg:#f9fafb;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.35;margin:0;padding:0;color:#111;background:var(--bg)}
+.site-header{display:flex;flex-direction:column;gap:12px;padding:16px;border-bottom:1px solid #eee;background:white;position:sticky;top:0;z-index:5}
+.brand{margin:0;font-size:20px}
+.header-controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.header-controls input, .header-controls select, .header-controls button{padding:8px;border-radius:8px;border:1px solid #ddd;background:white}
+.events{display:grid;gap:12px;padding:16px;max-width:1200px;margin:0 auto}
+.events.grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:#fff;border:1px solid #eee;padding:12px;border-radius:10px;display:flex;flex-direction:column;gap:8px;box-shadow:0 2px 6px rgba(0,0,0,0.04)}
+.card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+.card .meta{font-size:13px;color:var(--muted)}
+.card .title{font-weight:600}
+.btn{background:var(--accent);color:white;padding:8px;border:none;border-radius:8px;cursor:pointer}
+.results-info{padding:8px 16px;color:var(--muted);max-width:1200px;margin:0 auto}
+.pagination{display:flex;gap:8px;padding:12px;justify-content:center}
+.detail{padding:16px;max-width:900px;margin:0 auto;background:white;border-radius:8px;margin-top:16px}
+dialog{padding:16px;border-radius:12px}
+@media (max-width:480px){
+  .header-controls{flex-direction:column;align-items:stretch}
+  .card img{height:160px}
+}
